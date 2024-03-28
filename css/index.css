@@ -541,6 +541,11 @@ img {
 .tokenomic {
   padding: 100px 0 70px;
 }
+@media (max-width: 768px) {
+  .tokenomic {
+    padding: 90px 0;
+  }
+}
 .tokenomic__title {
   margin: 0 0 48px;
   font-weight: 400;
@@ -560,6 +565,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 -20px;
 }
 .tokenomic__figure-image {
   max-width: 100%;
@@ -580,4 +586,38 @@ img {
   .tokenomic__figure-image_sm {
     display: block;
   }
+}
+
+.country {
+  padding: 100px 0 0;
+}
+@media (max-width: 768px) {
+  .country {
+    padding-top: 50px;
+  }
+}
+.country__title {
+  margin: 0 0 31px;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 67%;
+  letter-spacing: -0.05em;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .country__title {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 133%;
+  }
+}
+.country__figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -20px;
+}
+.country__figure-image {
+  max-width: 100%;
+  height: auto;
 }
