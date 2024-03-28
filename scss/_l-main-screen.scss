@@ -1,0 +1,47 @@
+.main-screen {
+  position: relative;
+  padding: 162px 0 100px;
+  background: url(../assets/paper-bg.png) center no-repeat;
+
+  @include mobile {
+    padding: 120px 0 200px;
+  }
+
+  &::after {
+    @include mobile {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      width: 194px;
+      height: 139px;
+      background: url(../assets/main-screen-shhh.svg) center no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+    }
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include mobile {
+      display: inline-block;
+    }
+  }
+
+  &__image {
+  }
+}
