@@ -1,3 +1,13 @@
 .footer {
+  padding: 50px 0;
+  background-color: #202020;
 
+  &__info {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 222%;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: #fff;
+  }
 }

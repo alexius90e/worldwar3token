@@ -206,6 +206,19 @@ img {
   transform: scale(1);
 }
 
+.footer {
+  padding: 50px 0;
+  background-color: #202020;
+}
+.footer__info {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 222%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fff;
+}
+
 .main-screen {
   position: relative;
   padding: 162px 0 100px;
