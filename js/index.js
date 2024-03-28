@@ -8,7 +8,7 @@ const isRedButton = redButtonFigureFront && redButtonFigureBack && redButtonText
 
 if (isRedButton && isModalDisclaimer) {
   redButtonFigureFront.addEventListener('animationend', () => {
-    redButtonText.innerText = "Do not push it, We said do not push it! Hey, don't do it!";
+    redButtonText.innerText = "DO NOT push the button! Yo, seriously, don't do it!";
     redButtonFigureBack.addEventListener('click', () => {
       modalDisclaimer.classList.add('active');
     });

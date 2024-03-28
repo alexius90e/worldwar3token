@@ -15,6 +15,7 @@ body {
   margin: 0;
   overflow-y: scroll;
   color: #3a3a3a;
+  background: url(../assets/paper-bg.webp) top center repeat;
   background-color: #ffffff;
 }
 body.hidden {
@@ -172,7 +173,9 @@ img {
   background-image: url(../assets/tg.png);
 }
 .header__button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 240px;
   height: 50px;
   padding: 5px 10px 10px;
@@ -729,8 +732,9 @@ img {
 .modal-disclaimer__body {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
+  gap: 10px;
   width: 564px;
   aspect-ratio: 2.3305785/1;
   padding: 40px;
@@ -740,7 +744,7 @@ img {
 }
 @media (max-width: 576px) {
   .modal-disclaimer__body {
-    padding: 16px 10px;
+    padding: 10px;
     width: 320px;
   }
 }
@@ -767,7 +771,6 @@ img {
 .modal-disclaimer__button {
   font-weight: 700;
   font-size: 22px;
-  line-height: 77%;
   letter-spacing: -0.05em;
   text-align: center;
   color: #000;

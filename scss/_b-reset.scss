@@ -16,6 +16,7 @@ body {
   margin: 0;
   overflow-y: scroll;
   color: $black;
+  background: url(../assets/paper-bg.webp) top center repeat;
   background-color: $white;
 
   &.hidden {
