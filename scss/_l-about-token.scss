@@ -1,0 +1,226 @@
+.about-token {
+  position: relative;
+  padding: 185px 0 230px;
+  overflow: hidden;
+
+  @include laptop {
+    padding: 100px 0 60px;
+  }
+
+
+  @include tablet {
+    padding: 80px 0 20px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 52px;
+    right: 73%;
+    display: block;
+    width: 412px;
+    height: 559px;
+    background: url(../assets/about-left-bg.png) center no-repeat;
+    background-size: cover;
+
+    @include desktop {
+      right: 80%;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 70%;
+    display: block;
+    width: 426px;
+    height: 811px;
+    background: url(../assets/about-right-bg.png) center no-repeat;
+    background-size: cover;
+
+    @include desktop {
+      left: 82%;
+    }
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__coin {
+    position: absolute;
+    left: -200px;
+    bottom: -170px;
+    width: fit-content;
+    transform: rotate(-15deg);
+
+    @include desktop {
+      left: -100px;
+      bottom: -280px;
+    }
+
+    @include laptop {
+      position: static;
+      margin: 0 auto 33px;
+      transform: none;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 67%;
+    letter-spacing: -0.05em;
+    color: #000;
+
+    @include tablet {
+      margin: 0 0 14px;
+      font-size: 40px;
+      line-height: 100%;
+    }
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 536px;
+    margin: 0 auto 20px;
+    aspect-ratio: 8 / 1;
+    background: url(../assets/address-bg.svg) center no-repeat;
+    background-size: contain;
+
+    @include mobile {
+      gap: 4px;
+      width: 320px;
+    }
+
+    &-text,
+    &-number {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 222%;
+      letter-spacing: -0.05em;
+      color: #000;
+
+      @include mobile {
+        font-size: 11px;
+      }
+    }
+
+    &-button {
+      display: inline-block;
+      width: 81px;
+      aspect-ratio: 2 / 1;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 222%;
+      letter-spacing: -0.05em;
+      color: #fff;
+      border: none;
+      background: url(../assets/copy-button.svg) center no-repeat;
+      background-size: contain;
+      transition: transform ease-in-out 0.1s;
+      will-change: transform;
+      user-select: none;
+      cursor: pointer;
+
+      @include mobile {
+        width: 50px;
+        font-size: 11px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 44px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: -0.05em;
+    color: #fff;
+    background: url(../assets/tag-bg.svg) center no-repeat;
+    background-size: contain;
+  }
+
+  &__text {
+    max-width: 550px;
+    margin: 20px auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: -0.05em;
+    color: #000;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 240px;
+    height: 50px;
+    padding: 5px 10px 10px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: $black;
+    border: none;
+    background: url(../assets/button-white.svg) center no-repeat;
+    background-size: contain;
+    transition: transform ease-in-out 0.1s;
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
