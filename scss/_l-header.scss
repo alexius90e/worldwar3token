@@ -1,3 +1,106 @@
 .header {
-  
+  padding: 15px 0;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    @include mobile {
+      display: none;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__main {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 60px;
+
+    @include mobile {
+      justify-content: space-between;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include tablet {
+      gap: 2px;
+    }
+
+    &-link {
+      display: inline-block;
+      height: 70px;
+      width: 70px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @include tablet {
+        height: 46px;
+        width: 46px;
+      }
+
+      &_x {
+        background-image: url(../assets/x.png);
+      }
+
+      &_tg {
+        background-image: url(../assets/tg.png);
+      }
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 240px;
+    height: 50px;
+    padding: 5px 10px 10px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: #fff;
+    border: none;
+    background: url(../assets/button-red.svg) center no-repeat;
+    background-size: contain;
+    transition: transform ease-in-out 0.1s;
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+
+    @include tablet {
+      width: 150px;
+      height: 50px;
+      background-image: url(../assets/button-red-sm.svg);
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
 }

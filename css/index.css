@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url("../fonts/ComicSansMS.ttf") format("truetype");
+}
 html {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -60,7 +63,7 @@ a,
 button,
 input,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 figure {
@@ -73,7 +76,7 @@ img {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -93,4 +96,106 @@ img {
   .container {
     max-width: 576px;
   }
+}
+
+.header {
+  padding: 15px 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+.header__logo {
+  flex: 0 0 auto;
+}
+@media (max-width: 576px) {
+  .header__logo {
+    display: none;
+  }
+}
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo-image {
+  display: block;
+  max-width: 100%;
+}
+.header__main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 60px;
+}
+@media (max-width: 576px) {
+  .header__main {
+    justify-content: space-between;
+  }
+}
+.header__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .header__social {
+    gap: 2px;
+  }
+}
+.header__social-link {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 768px) {
+  .header__social-link {
+    height: 46px;
+    width: 46px;
+  }
+}
+.header__social-link_x {
+  background-image: url(../assets/x.png);
+}
+.header__social-link_tg {
+  background-image: url(../assets/tg.png);
+}
+.header__button {
+  display: inline-block;
+  width: 240px;
+  height: 50px;
+  padding: 5px 10px 10px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: #fff;
+  border: none;
+  background: url(../assets/button-red.svg) center no-repeat;
+  background-size: contain;
+  transition: transform ease-in-out 0.1s;
+  will-change: transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header__button {
+    width: 150px;
+    height: 50px;
+    background-image: url(../assets/button-red-sm.svg);
+  }
+}
+.header__button:hover {
+  transform: scale(1.02);
+}
+.header__button:active {
+  transform: scale(1);
 }

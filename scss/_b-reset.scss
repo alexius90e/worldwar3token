@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('../fonts/ComicSansMS.ttf') format('truetype');
+}
 
 html {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Comic Sans MS', sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -59,7 +62,7 @@ a,
 button,
 input,
 textarea {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Comic Sans MS', sans-serif;
 }
 
 figure {
