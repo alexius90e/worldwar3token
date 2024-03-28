@@ -1,0 +1,45 @@
+.tokenomic {
+  padding: 100px 0 70px;
+
+  &__title {
+    margin: 0 0 48px;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 67%;
+    letter-spacing: -0.05em;
+    color: #000;
+
+    @include tablet {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 133%;
+    }
+  }
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-image {
+      max-width: 100%;
+      height: auto;
+
+      &_lg {
+        display: block;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &_sm {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+  }
+}

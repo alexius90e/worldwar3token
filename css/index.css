@@ -537,3 +537,47 @@ img {
 .about-token__button:active {
   transform: scale(1);
 }
+
+.tokenomic {
+  padding: 100px 0 70px;
+}
+.tokenomic__title {
+  margin: 0 0 48px;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 67%;
+  letter-spacing: -0.05em;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .tokenomic__title {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 133%;
+  }
+}
+.tokenomic__figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tokenomic__figure-image {
+  max-width: 100%;
+  height: auto;
+}
+.tokenomic__figure-image_lg {
+  display: block;
+}
+@media (max-width: 768px) {
+  .tokenomic__figure-image_lg {
+    display: none;
+  }
+}
+.tokenomic__figure-image_sm {
+  display: none;
+}
+@media (max-width: 768px) {
+  .tokenomic__figure-image_sm {
+    display: block;
+  }
+}
