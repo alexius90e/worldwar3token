@@ -138,6 +138,7 @@ img {
 @media (max-width: 576px) {
   .header__main {
     justify-content: space-between;
+    gap: 20px;
   }
 }
 .header__social {
@@ -248,4 +249,67 @@ img {
   .main-screen__logo {
     display: inline-block;
   }
+}
+.main-screen__image {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-section {
+  padding: 50px 0;
+  background-color: #202020;
+}
+@media (max-width: 576px) {
+  .text-section {
+    padding: 20px 0;
+  }
+}
+.text-section__text {
+  margin: 0 0 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 222%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .text-section__text {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 250%;
+  }
+}
+.text-section__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-section__button {
+  display: inline-block;
+  width: 240px;
+  height: 50px;
+  padding: 5px 10px 10px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: #3a3a3a;
+  border: none;
+  background: url(../assets/button-white.svg) center no-repeat;
+  background-size: contain;
+  transition: transform ease-in-out 0.1s;
+  will-change: transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.text-section__button:hover {
+  transform: scale(1.02);
+}
+.text-section__button:active {
+  transform: scale(1);
 }
