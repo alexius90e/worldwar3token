@@ -1283,6 +1283,13 @@ img {
     border-radius: 8px;
   }
 }
+.invite__content-code-input::-webkit-outer-spin-button, .invite__content-code-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.invite__content-code-input[type=number] {
+  -moz-appearance: textfield;
+}
 .invite__content-buttons {
   display: flex;
   justify-content: flex-start;
