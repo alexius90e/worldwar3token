@@ -1,6 +1,10 @@
 .login {
   padding: 60px 0 160px;
 
+  @include laptop {
+    padding: 20px 0 80px;
+  }
+
   & .container {
     position: relative;
   }

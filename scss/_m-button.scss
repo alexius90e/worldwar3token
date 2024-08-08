@@ -1,5 +1,5 @@
 .button {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 240px;
@@ -22,6 +22,19 @@
   &_primary {
     color: $white;
     background-image: url(../assets/button-red.svg);
+  }
+
+  &_lg-primary {
+    width: 453px;
+    height: 53px;
+    color: $white;
+    background-image: url(../assets/button-red-lg.svg);
+
+    @include mobile {
+      width: 240px;
+      height: 50px;
+      background-image: url(../assets/button-red.svg);
+    }
   }
 
   &:hover {
