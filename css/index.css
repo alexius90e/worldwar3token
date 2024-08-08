@@ -260,7 +260,6 @@ img {
 .main-screen {
   position: relative;
   padding: 162px 0 100px;
-  background: url(../assets/paper-bg.png) center no-repeat;
 }
 @media (max-width: 576px) {
   .main-screen {
@@ -1007,6 +1006,7 @@ img {
   line-height: 122%;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  text-align: left;
   color: #000;
 }
 @media (max-width: 1380px) {
