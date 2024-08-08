@@ -28,7 +28,7 @@ const textSectionText = document.querySelector('.text-section__text');
 if (textSectionButton && textSectionText) {
   textSectionButton.addEventListener('click', () => {
     textSectionText.innerText =
-      "We all know the drill—reptilians are the real big bosses of the planet. Since some folks are teetering on the brink of sparking World War 3, our scaly leaders are stepping up, coming out of the shadows to wage their own war against the crazies. Their plan to whip up a new economy is gonna help dodge a real war and let folks blow off some steam. $WW3 is set to be the fix-it-all solution. Ready to see where you stand in this wild world? Catch you soon!";
+      'We all know the drill—reptilians are the real big bosses of the planet. Since some folks are teetering on the brink of sparking World War 3, our scaly leaders are stepping up, coming out of the shadows to wage their own war against the crazies. Their plan to whip up a new economy is gonna help dodge a real war and let folks blow off some steam. $WW3 is set to be the fix-it-all solution. Ready to see where you stand in this wild world? Catch you soon!';
   });
 }
 
@@ -48,5 +48,14 @@ const aboutTokenAddressButton = document.querySelector('.about-token__address-bu
 if (aboutTokenAddressNumber && aboutTokenAddressButton) {
   aboutTokenAddressButton.addEventListener('click', () => {
     navigator.clipboard.writeText(aboutTokenAddressNumber.innerText);
+  });
+}
+
+const presaleSoonTranslateButton = document.querySelector('.presale-soon__controls-button');
+const presaleSoonText = document.querySelector('.presale-soon__text');
+
+if (presaleSoonTranslateButton && presaleSoonText) {
+  presaleSoonTranslateButton.addEventListener('click', () => {
+    presaleSoonText.classList.add('active');
   });
 }

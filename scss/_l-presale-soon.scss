@@ -1,0 +1,162 @@
+.presale-soon {
+  padding: 247px 0 287px;
+
+  @include tablet {
+    padding: 130px 0 155px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__content {
+    max-width: 647px;
+
+    @include desktop {
+      max-width: 50%;
+    }
+
+    @include laptop {
+      max-width: none;
+    }
+  }
+
+  &__title {
+    margin: 0 0 25px;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 127%;
+    letter-spacing: -0.05em;
+    text-align: left;
+    color: #000;
+
+    @include desktop {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 150%;
+    }
+
+    @include laptop {
+      text-align: center;
+    }
+
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: calc(100% - 647px - 60px);
+
+    @include desktop {
+      max-width: calc(50% - 24px);
+    }
+
+    @include laptop {
+      position: static;
+      display: flex;
+      justify-content: center;
+      max-width: none;
+      margin: 0 0 25px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    margin: 0 0 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: -0.05em;
+    color: #000;
+
+    @include laptop {
+      text-align: center;
+    }
+
+    &-initial {
+      display: block;
+    }
+
+    &.active &-initial {
+      display: none;
+    }
+
+    &-translated {
+      display: none;
+    }
+
+    &.active &-translated {
+      display: block;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 25px;
+
+    @include laptop {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-links {
+      display: flex;
+      gap: 10px;
+      padding-top: 16px;
+
+      @include laptop {
+        padding: 0;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      height: 64px;
+      width: 64px;
+      background: url(../assets/social-button.svg) center no-repeat;
+      background-size: 100%;
+      transition: transform ease-in-out 0.1s;
+      will-change: transform;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 64px;
+      }
+
+      &_x {
+        &::before {
+          background-image: url(../assets/x.png);
+        }
+      }
+
+      &_tg {
+        &::before {
+          background-image: url(../assets/tg.png);
+        }
+      }
+    }
+  }
+}

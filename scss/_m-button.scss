@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  width: 240px;
+  height: 50px;
+  padding: 5px 10px 10px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: $black;
+  border: none;
+  background: url(../assets/button-white.svg) center no-repeat;
+  background-size: contain;
+  transition: transform ease-in-out 0.1s;
+  will-change: transform;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
