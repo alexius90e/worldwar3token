@@ -12,6 +12,7 @@ html {
 
 body {
   position: relative;
+  z-index: 1;
   margin: 0;
   overflow-y: scroll;
   color: #3a3a3a;
@@ -674,6 +675,7 @@ img {
   flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
+  display: none;
 }
 .red-button__figures {
   position: relative;
@@ -695,7 +697,7 @@ img {
   max-height: 70vh;
 }
 .red-button__text {
-  max-width: 480px;
+  max-width: 960px;
   min-height: 80px;
   margin: 27px auto 0;
   font-weight: 700;
@@ -720,14 +722,16 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 300;
-  display: none;
+  z-index: -1;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
 }
 .modal-disclaimer.active {
-  display: flex;
+  z-index: 300;
+  opacity: 1;
 }
 .modal-disclaimer__body {
   display: flex;

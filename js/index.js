@@ -8,7 +8,7 @@ const isRedButton = redButtonFigureFront && redButtonFigureBack && redButtonText
 
 if (isRedButton && isModalDisclaimer) {
   redButtonFigureFront.addEventListener('animationend', () => {
-    redButtonText.innerText = "DO NOT push the button! Yo, seriously, don't do it!";
+    redButtonText.innerText = "Don't you dare hit that button! We mean it. Just don't!";
     redButtonFigureBack.addEventListener('click', () => {
       modalDisclaimer.classList.add('active');
     });
@@ -28,7 +28,7 @@ const textSectionText = document.querySelector('.text-section__text');
 if (textSectionButton && textSectionText) {
   textSectionButton.addEventListener('click', () => {
     textSectionText.innerText =
-      "It's a well-known secret that Earth is under the thumb of the Lizard Squad. With the world's geopolitical scene getting real spicy, they've had to take some drastic steps. To dodge an actual World War III, they're rolling out its economic simulation via cryptocurrency - $WW3. Here's where you get to figure out which country's got the edge, let those feelings fly, make or break the bank, and build some epic communities. Y'all ready for this? Catch you on BASE.";
+      "We all know the drill—reptilians are the real big bosses of the planet. Since some folks are teetering on the brink of sparking World War 3, our scaly leaders are stepping up, coming out of the shadows to wage their own war against the crazies. Their plan to whip up a new economy is gonna help dodge a real war and let folks blow off some steam. $WW3 is set to be the fix-it-all solution. Ready to see where you stand in this wild world? Catch you soon!";
   });
 }
 
