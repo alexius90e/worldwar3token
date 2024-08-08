@@ -244,6 +244,10 @@ img {
   transform: scale(1);
 }
 
+.main {
+  padding-top: 100px;
+}
+
 .footer {
   padding: 50px 0;
   background-color: #202020;
@@ -259,11 +263,11 @@ img {
 
 .main-screen {
   position: relative;
-  padding: 162px 0 100px;
+  padding: 62px 0 100px;
 }
 @media (max-width: 576px) {
   .main-screen {
-    padding: 120px 0 200px;
+    padding: 20px 0 200px;
   }
 }
 @media (max-width: 576px) {
@@ -1057,4 +1061,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.login {
+  padding: 60px 0 160px;
 }
