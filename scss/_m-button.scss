@@ -1,5 +1,7 @@
 .button {
-  display: inline-block;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
   width: 240px;
   height: 50px;
   padding: 5px 10px 10px;
@@ -16,6 +18,11 @@
   will-change: transform;
   user-select: none;
   cursor: pointer;
+
+  &_primary {
+    color: $white;
+    background-image: url(../assets/button-red.svg);
+  }
 
   &:hover {
     transform: scale(1.02);
