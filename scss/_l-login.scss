@@ -1,3 +1,90 @@
 .login {
   padding: 60px 0 160px;
+
+  & .container {
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 735px;
+    height: 740px;
+
+    @include desktop {
+      max-width: 50%;
+    }
+
+    @include laptop {
+      max-width: none;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 103%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+
+    @include desktop {
+      max-width: none;
+      height: auto;
+      font-size: 50px;
+      line-height: 150%;
+    }
+
+    @include laptop {
+      margin: 0;
+    }
+
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+
+    @include desktop {
+      width: calc(50% - 30px);
+    }
+
+    @include laptop {
+      position: static;
+      width: auto;
+      transform: none;
+    }
+
+    &-image {
+      display: block;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: #000;
+  }
 }
