@@ -35,6 +35,10 @@
       height: 50px;
       background-image: url(../assets/button-red.svg);
     }
+
+    &:disabled {
+      filter: grayscale(1) brightness(1.4);
+    }
   }
 
   &:hover {
