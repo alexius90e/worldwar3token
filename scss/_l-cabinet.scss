@@ -1,0 +1,208 @@
+.cabinet {
+  padding: 80px 0 100px;
+  min-height: calc(100vh - 240px);
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 20px 0 60px;
+  }
+
+  & .container {
+    display: flex;
+    gap: 100px;
+
+    @include desktop {
+      gap: 50px 40px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+
+  &__user {
+    flex: 0 0 240px;
+    box-sizing: border-box;
+
+    &-avatar {
+      max-width: 200px;
+      margin: 0 auto 10px;
+      overflow: hidden;
+      border-radius: 200px;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 200%;
+      letter-spacing: -0.05em;
+      text-align: center;
+      color: #000;
+    }
+
+    &-invite {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 286%;
+      letter-spacing: -0.05em;
+      text-align: center;
+      color: #000;
+    }
+
+    &-logout {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 30px;
+
+      &-button {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 6px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.05em;
+        text-align: center;
+        color: #000;
+        border: none;
+        border-radius: 4px;
+        background-color: $white;
+        transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          filter: invert(1);
+        }
+
+        &:active {
+          transform: scale(0.96);
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: url(../assets/logout.svg) center no-repeat;
+        }
+      }
+    }
+
+    &-referral {
+      &-title {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 200%;
+        letter-spacing: -0.05em;
+        text-align: center;
+        color: #000;
+
+        @include laptop {
+          justify-content: center;
+        }
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: url(../assets/link.svg) center no-repeat;
+        }
+      }
+
+      &-link {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        max-width: 240px;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px dashed #000;
+        border-radius: 6px;
+
+        &-text {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: -0.05em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &-copy {
+          flex: 0 0 auto;
+          display: inline-block;
+          padding: 0;
+          height: 24px;
+          width: 24px;
+          border: none;
+          background: url(../assets/copy.svg);
+          cursor: pointer;
+          transition: filter ease-in-out 0.2s, transform ease-in-out 0.1s;
+          cursor: pointer;
+
+          &:hover {
+            filter: brightness(0.2);
+          }
+
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__subscribed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 674px;
+    padding-top: 80px;
+    box-sizing: border-box;
+
+    @include laptop {
+      min-height: auto;
+      padding-top: 0;
+    }
+
+    &-text {
+      display: inline-block;
+      max-width: 595px;
+      margin: 0 0 20px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 267%;
+      letter-spacing: -0.05em;
+      text-align: center;
+      color: #000;
+
+      @include laptop {
+        font-size: 24px;
+        line-height: 150%;
+      }
+
+      & a {
+        color: #000;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+}

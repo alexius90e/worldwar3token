@@ -59,3 +59,12 @@ if (presaleSoonTranslateButton && presaleSoonText) {
     presaleSoonText.classList.add('active');
   });
 }
+
+const cabinetUserReferralLink = document.querySelector('.cabinet__user-referral-link-text');
+const cabinetUserReferralCopyButton = document.querySelector('.cabinet__user-referral-link-copy');
+
+if (cabinetUserReferralLink && cabinetUserReferralCopyButton) {
+  cabinetUserReferralCopyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(cabinetUserReferralLink.innerText);
+  });
+}
