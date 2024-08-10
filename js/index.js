@@ -92,3 +92,22 @@ const cabinetReferralSwiper = new Swiper('.cabinet__info-referrals .swiper', {
     el: '.cabinet__info-referrals .swiper-pagination',
   },
 });
+
+const cabinetPresaleTaskCompleteButton = document.querySelector(
+  '.cabinet__presale-task-complete-button'
+);
+const modalTasks = document.querySelector('.modal-tasks');
+
+if (cabinetPresaleTaskCompleteButton && modalTasks) {
+  cabinetPresaleTaskCompleteButton.addEventListener('click', () => {
+    modalTasks.classList.add('active');
+  });
+
+  modalTasks.addEventListener('click', (event) => {
+    const isCloseButton = event.target.classList.contains('modal-tasks__close');
+    const isModalWrapper = event.target === event.currentTarget;
+    if (isCloseButton || isModalWrapper) {
+      modalTasks.classList.remove('active');
+    }
+  });
+}
