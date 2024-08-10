@@ -68,3 +68,27 @@ if (cabinetUserReferralLink && cabinetUserReferralCopyButton) {
     navigator.clipboard.writeText(cabinetUserReferralLink.innerText);
   });
 }
+const cabinetPresaleAddressLink = document.querySelector('.cabinet__presale-address-text');
+const cabinetPresaleAddressButton = document.querySelector('.cabinet__presale-address-copy');
+
+if (cabinetPresaleAddressLink && cabinetPresaleAddressButton) {
+  cabinetPresaleAddressButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(cabinetPresaleAddressLink.innerText);
+  });
+}
+const cabinetPresaleLink = document.querySelector('.cabinet__presale-link');
+const cabinetPresaleCopyButton = document.querySelector('.cabinet__presale-link-copy');
+
+if (cabinetPresaleLink && cabinetPresaleCopyButton) {
+  cabinetPresaleCopyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(cabinetPresaleLink.innerText);
+  });
+}
+
+const cabinetReferralSwiper = new Swiper('.cabinet__info-referrals .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  pagination: {
+    el: '.cabinet__info-referrals .swiper-pagination',
+  },
+});
