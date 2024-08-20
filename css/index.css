@@ -142,7 +142,9 @@ img {
 .button:active {
   transform: scale(1);
 }
-.button:disabled {
+.button:disabled, .button_disabled {
+  pointer-events: none;
+  cursor: default;
   filter: grayscale(1) brightness(1.4);
 }
 
@@ -630,6 +632,11 @@ img {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+.about-token__sun-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about-token__sun-image {
   display: block;
