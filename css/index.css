@@ -19,10 +19,6 @@ body {
   background: url(../assets/paper-bg.webp) top center repeat;
   background-color: #ffffff;
 }
-body.hidden {
-  overflow: hidden;
-}
-
 h2 {
   margin: 0;
   font-weight: 700;
@@ -465,6 +461,11 @@ img {
     transform: none;
   }
 }
+@media (max-width: 992px) {
+  .about-token_no-bg-sm .about-token__coin {
+    display: none;
+  }
+}
 .about-token__coin-image {
   display: block;
   max-width: 100%;
@@ -504,14 +505,19 @@ img {
 }
 .about-token__address-text, .about-token__address-number {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 222%;
   letter-spacing: -0.05em;
   color: #000;
 }
 @media (max-width: 576px) {
   .about-token__address-text, .about-token__address-number {
-    font-size: 11px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .about-token__address-text {
+    display: none;
   }
 }
 .about-token__address-button {
@@ -556,6 +562,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   width: 105px;
   height: 44px;
   font-weight: 400;
@@ -565,6 +572,14 @@ img {
   color: #fff;
   background: url(../assets/tag-bg.svg) center no-repeat;
   background-size: contain;
+}
+.about-token__tag_tron::after {
+  content: "";
+  display: block;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  background: url(../assets/tron.png);
 }
 .about-token__text {
   max-width: 550px;
@@ -606,6 +621,40 @@ img {
 }
 .about-token__button:active {
   transform: scale(1);
+}
+.about-token__sun {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.about-token__sun-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.about-token__sun::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: calc(100% + 25px);
+  width: 194px;
+  height: 139px;
+  background: url(../assets/click.svg) center no-repeat;
+}
+@media (max-width: 992px) {
+  .about-token__sun::after {
+    left: calc(100% - 10px);
+  }
+}
+@media (max-width: 576px) {
+  .about-token__sun::after {
+    display: none;
+  }
 }
 
 .tokenomic {
@@ -728,6 +777,7 @@ img {
   flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
+  display: none;
 }
 .red-button__figures {
   position: relative;
