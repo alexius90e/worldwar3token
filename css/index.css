@@ -19,6 +19,10 @@ body {
   background: url(../assets/paper-bg.webp) top center repeat;
   background-color: #ffffff;
 }
+body.hidden {
+  overflow: hidden;
+}
+
 h2 {
   margin: 0;
   font-weight: 700;
@@ -784,7 +788,6 @@ img {
   flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
-  display: none;
 }
 .red-button__figures {
   position: relative;
